@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">My Portfolio</div>
+
+      <!-- Hamburger Icon -->
+      <div class="hamburger" onclick="toggleMenu()">
+        ☰
+      </div>
+
+      <!-- Menu -->
+      <ul class="nav-links" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="contact" class="contact">
+    <div class="contact-container">
+
+      <!-- Left Side -->
+      <div class="contact-left">
+        <img src="32.png" alt="Contact Us">
+
+        <a href="https://wa.me/923313213337" target="_blank" class="btn whatsapp">
+          WhatsApp Me
+        </a>
+
+        <a href="mailto:abdurrahmancs2005@gmail.com" class="btn email">
+          Email Me
+        </a>
+      </div>
+
+      <!-- Right Side -->
+      <div class="contact-right">
+        <h2>Contact Me</h2>
+
+        <form action="connect.php" method="POST" id="contactForm">
+          <input type="text" id="name" placeholder="Enter Your Name" name="name" required>
+          <input type="email" id="email" placeholder="Enter Your Email" name="email" required>
+          <textarea id="message" placeholder="Message..." name="message" rows="6" required></textarea>
+          <button type="submit">submit</button>
+        </form>
+        <p id="error" style="color: red;"></p>
+      </div>
+
+    </div>
+  </section>
+  <footer class="footer">
+    <p>© 2026 Abdur Rehman | All Rights Reserved</p>
+  </footer>
+  <script>
+    
+    // Form validation
+
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      let name = document.getElementById("name").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let message = document.getElementById("message").value.trim();
+      let error = document.getElementById("error");
+
+      error.innerHTML = "";
+
+      // Name validation
+      let namePattern = /^[A-Za-z ]+$/;
+      if (!name.match(namePattern)) {
+        error.innerHTML = "Name must contain only English letters!";
+        return;
+      }
+
+      // Email validation
+      let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!email.match(emailPattern)) {
+        error.innerHTML = "Enter a valid email!";
+        return;
+      }
+
+      // Message validation
+      if (message.length < 10) {
+        error.innerHTML = "Message must be at least 10 characters!";
+        return;
+      }
+
+      error.style.color = "green";
+      error.innerHTML = "Form submitted successfully!";
+      document.getElementById("contactForm").reset();
+      setTimeout(() => {
+        error.innerHTML = "";
+      }, 3000);
+    });
+
+    function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("active");
+}
+  </script>
+</body>
+
+</html>

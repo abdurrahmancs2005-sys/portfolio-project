@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">My Portfolio</div>
+
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <!-- Menu -->
+        <ul class="nav-links" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="hero">
+
+    <!-- Left text -->
+    <div class="hero-text">
+      <h3>Hi, My name is</h3>
+      <h1>Abdur Rehman</h1>
+      <h3>And I'm a <span class="multiple-text"></span></h3>
+      <!-- <p>
+        I build modern and responsive websites using HTML, CSS, JavaScript and PHP.
+      </p> -->
+     <a href="about.html" >
+   <button class="pdf-btn">About Me ➜</button>
+</a>
+</div>
+
+    <!-- Right image -->
+    <div class="hero-image">
+      <img src="cc.png" alt="My Photo">
+    </div>
+
+  </section>
+
+<script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+<script src="script.js"></script>
+<footer class="footer">
+    <p>© 2026 Abdur Rehman | All Rights Reserved</p>
+</footer>
+</body>
+</html>
