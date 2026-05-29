@@ -409,14 +409,12 @@ transform:scale(1.04);
   text-align: center;
 }
   .box{
-    padding: 32px 34px;
+    padding: 32px 32px;
     width: 100%;
   }
   .box h3{
-    /* font-size: 21px; */
+    font-size: 20px;
     text-align: center;
-    font-size: 16px;
-    white-space: nowrap;
   }
   .p-text{
     font-size: 16px;
