@@ -294,6 +294,8 @@ body {
     /* change from column to row */
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 1000;
   }
 
   .hamburger {
@@ -311,7 +313,11 @@ body {
     width: 150px;
     padding: 15px;
     border-radius: 10px;
+    z-index: 1001;
   }
+  /* .hero{
+    padding-top: 30px;
+  } */
 
   .nav-links.active {
     display: flex;
