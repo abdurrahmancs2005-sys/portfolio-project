@@ -61,7 +61,7 @@ body {
 
 
 .hero-text span {
-  color: rgb(10, 161, 255);
+  color:rgb(9, 241, 241);
 }
 
 
@@ -73,7 +73,7 @@ body {
   border: 6px solid rgb(9, 222, 222);
   box-shadow: 0 0 25px rgb(9, 229, 229);
   animation: zoomIn 1s ease forwards;
-  animation-delay: .4s;
+  animation-delay: .2s;
 }
 @keyframes zoomIn {
   0% {

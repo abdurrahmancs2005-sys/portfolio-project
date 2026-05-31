@@ -3,7 +3,7 @@ function toggleMenu() {
     document.getElementById("navMenu").classList.toggle("active");
 }
 var typed = new Typed(".multiple-text", {
-    strings: ["Web Developer",  
+    strings: ["Web Developer", "Data Entry",
     "Video Editor"],
     typeSpeed: 100,
     backSpeed: 100,
